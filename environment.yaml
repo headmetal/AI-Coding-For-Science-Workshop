@@ -1,0 +1,12 @@
+name: ai_coding_workshop_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - matplotlib
+  - xarray
+  - netcdf4
+  - jupyter
+  - ipykernel
