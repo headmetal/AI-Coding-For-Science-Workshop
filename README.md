@@ -20,17 +20,22 @@ Download and install from [code.visualstudio.com/download](https://code.visualst
 Sign up at [github.com/signup](https://github.com/signup) if you don't already have one.
 
 ### 3. Get GitHub Copilot access
-Free GitHub Copilot Pro is available to verified teachers, researchers, and staff via GitHub Education. Apply at **github.com/settings/education/benefits** (search GitHub's docs for "apply to GitHub Education as a teacher" if that link moves). Approval isn't instant, so apply well ahead of the workshop. Students can use the [Student Developer Pack](https://education.github.com/pack) instead. N.B. Worth double-checking Copilot is currently included, as this has occasionally been paused for new sign-ups.
+Free GitHub Copilot Pro is available to verified teachers, researchers, and staff via GitHub Education. Apply at **github.com/settings/education/benefits** (search GitHub's docs for "apply to GitHub Education as a teacher" if that link moves). Approval isn't instant, so apply well ahead of the workshop. Students can use the [Student Developer Pack](https://education.github.com/pack) instead — worth double-checking Copilot is currently included, as this has occasionally been paused for new sign-ups.
 
-### 4. Clone this repo and create the environment
+### 4. Clone this repo
 ```bash
 git clone https://github.com/headmetal/AI-Coding-For-Science-Workshop.git
 cd AI-Coding-For-Science-Workshop
-conda env create -f environment.yaml
-conda activate ai_coding_workshop
 ```
 
-### 5. Launch and connect everything
+### 5. Create and activate the conda environment
+```bash
+conda env create -f environment.yaml
+conda activate ai_coding_workshop_env
+```
+This reads `environment.yaml` and builds a new conda environment called `ai_coding_workshop_env` with everything the notebook needs (Python, xarray, numpy, pandas, matplotlib, cartopy, and Jupyter). It only needs to be created once — after that, `conda activate ai_coding_workshop` is all you need each time you come back to this.
+
+### 6. Launch and connect everything
 1. Open this folder in VS Code (`code .`).
 2. Sign in to GitHub via the Accounts icon (bottom-left) — this activates Copilot Chat.
 3. Open `Part2_Hands_On_Lab.ipynb`.
