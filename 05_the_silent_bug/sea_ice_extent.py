@@ -1,7 +1,4 @@
-"""Monthly Southern Hemisphere sea-ice extent (million km^2) from a synthetic concentration field.
-
-Runs cleanly. Produces plausible-looking numbers. Contains two bugs.
-"""
+"""Monthly Southern Hemisphere sea-ice extent (million km^2) from a synthetic concentration field."""
 import numpy as np
 
 # ---------------------------------------------------------------------------
