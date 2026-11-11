@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# challenge outputs produced by participants
+mld.py
+vint.py
+synthetic.csv
+catalogue.csv
+sst_daily.csv
+out.txt
+test_running_mean.py
+spaghetti_refactored.py
+.DS_Store
+
+# facilitator notes and reference solutions are kept locally, never committed
+_facilitator/

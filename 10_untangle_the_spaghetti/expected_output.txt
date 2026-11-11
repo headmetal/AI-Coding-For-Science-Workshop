@@ -1,0 +1,10 @@
+Southern Ocean trend: 0.0028 degC/yr
+Southern Ocean mean: 8.820
+Tropics trend: 0.0239 degC/yr
+Tropics mean: 19.842
+North Atlantic trend: 0.0407 degC/yr
+North Atlantic mean: 14.211
+largest trend: North Atlantic
+mean of trends: 0.0225
+tropics more variable than SO
+done
