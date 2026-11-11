@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/user/analysis/pipeline.py", line 56, in <module>
+    main()
+  File "/home/user/analysis/pipeline.py", line 50, in main
+    means = regional_means(field, lat, lon)
+  File "/home/user/analysis/pipeline.py", line 44, in regional_means
+    out[name] = masked_mean(field, mask, weights)
+  File "/home/user/analysis/pipeline.py", line 35, in masked_mean
+    wsum = np.nansum(weights * ~np.isnan(masked), axis=(1, 2))
+ValueError: operands could not be broadcast together with shapes (180,90) (12,90,180) 

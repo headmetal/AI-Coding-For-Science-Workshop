@@ -1,0 +1,4 @@
+mean anomaly: 2.3625
+std detrended: 0.8490
+max detrended at index: 470
+clim Jan Jul: 16.457 8.588

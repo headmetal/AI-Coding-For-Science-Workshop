@@ -1,12 +1,12 @@
-name: ai_coding_workshop_env
+# Minimal environment for the Part 2 challenges.
+# Only numpy and pandas are imported by the supplied scripts and checkers.
+# matplotlib is included because several challenges invite you to ask the AI
+# for a plot; drop it if you never will.
+name: ai_challenges
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+  - python>=3.9
   - numpy
   - pandas
   - matplotlib
-  - xarray
-  - netcdf4
-  - jupyter
-  - ipykernel
