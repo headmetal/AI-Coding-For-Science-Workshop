@@ -11,7 +11,7 @@ numbers, and is wrong. A colleague who knows the data says the September value i
 1. Run it. Look at the numbers. They look fine. That is the point.
 2. Paste the script and ask the AI: "Is this correct?" Note the answer.
 3. Now paste it again in a fresh conversation with the colleague's comment: "The September extent is
-   about 40% too high. Find the bug." Note the difference.
+   about four times too high. Find the bug." Note the difference.
 4. Fix it, re-run, and check.
 
 ## How to check

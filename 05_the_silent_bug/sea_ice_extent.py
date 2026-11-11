@@ -8,10 +8,10 @@ import numpy as np
 # Synthetic concentration: 12 months x 1-degree grid, SH only (90S-40S)
 # ---------------------------------------------------------------------------
 lat = np.arange(-89.5, -39.5, 1.0)             # cell centres
-lon = np.arange(0.0, 361.0, 1.0)               # cell centres, 0..360
+lon = np.arange(0.5, 360.0, 1.0)               # cell centres
 months = np.arange(12)
 
-# Ice edge latitude moves between ~-68.5 (Feb) and ~-60 (Sep), with a small zonal wave.
+# Ice edge latitude moves between ~-71.5 (Mar) and ~-63 (Sep), with a small zonal wave.
 edge = -67.25 + 4.25 * np.cos(2 * np.pi * (months - 8) / 12.0)      # (12,)
 wave = 2.0 * np.cos(np.deg2rad(3.0 * lon))                           # (nlon,)
 LAT, LON = np.meshgrid(lat, lon, indexing="ij")
