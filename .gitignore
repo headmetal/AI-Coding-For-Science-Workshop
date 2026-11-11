@@ -230,3 +230,6 @@ spaghetti_refactored.py
 
 # facilitator notes and reference solutions are kept locally, never committed
 _facilitator/
+
+# Claude Code write-tracking folders
+.claude/
