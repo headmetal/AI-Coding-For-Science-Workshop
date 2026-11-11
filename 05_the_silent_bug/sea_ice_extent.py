@@ -1,25 +1,11 @@
-"""Monthly Southern Hemisphere sea-ice extent (million km^2) from a synthetic concentration field."""
+"""Monthly Southern Hemisphere sea-ice extent (million km^2) from a gridded concentration field."""
 import numpy as np
 
-# ---------------------------------------------------------------------------
-# Synthetic concentration: 12 months x 1-degree grid, SH only (90S-40S)
-# ---------------------------------------------------------------------------
-lat = np.arange(-89.5, -39.5, 1.0)             # cell centres
-lon = np.arange(0.5, 360.0, 1.0)               # cell centres
-months = np.arange(12)
-
-# Ice edge latitude moves between ~-71.5 (Mar) and ~-63 (Sep), with a small zonal wave.
-edge = -67.25 + 4.25 * np.cos(2 * np.pi * (months - 8) / 12.0)      # (12,)
-wave = 2.0 * np.cos(np.deg2rad(3.0 * lon))                           # (nlon,)
-LAT, LON = np.meshgrid(lat, lon, indexing="ij")
-sic = np.zeros((12, lat.size, lon.size))
-for m in months:
-    sic[m] = 100.0 / (1.0 + np.exp((LAT - (edge[m] + wave[None, :])) / 1.5))
-sic[:, LAT < -70.0] = 0.0                      # Antarctic continent (approximated as everything south of 70S)
-sic = np.clip(sic, 0.0, 100.0)                 # concentration in percent, as in the satellite products
+d = np.load("sic_synthetic.npz")
+sic, lat, lon = d["sic"], d["lat"], d["lon"]   # sic: (12, nlat, nlon), 1-degree grid
 
 # ---------------------------------------------------------------------------
-# Extent: total area of cells with concentration >= 15%
+# Extent: total area of cells with at least 15% ice
 # ---------------------------------------------------------------------------
 EARTH_RADIUS_KM = 6371.0
 deg = np.deg2rad(1.0)

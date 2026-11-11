@@ -6,7 +6,7 @@
 | 02 | Explain the traceback | 10 | warm-up | Reading errors; diagnosis vs plausible guess | Confidently wrong |
 | 03 | Function from a description | 15–20 | core | Vague vs specific prompt, scored by a checker | Better prompting |
 | 04 | Make it faster | 15 | core | Vectorisation; asking "why" | Tool, not oracle |
-| 05 | The silent bug | 15–20 | core | Working code that is wrong; the AI can't tell you what you didn't ask | Fluency is not accuracy |
+| 05 | The silent bug | 15–20 | core | Working code that is wrong; the AI can't review what it wasn't given | Fluency is not accuracy |
 | 06 | Describe the dataset | 10–15 | core | Metadata to understanding in one prompt | Context is key |
 | 07 | Read the plot | 10 | core | Multimodal input: images in, code out | Capabilities people don't expect |
 | 08 | Write the tests first | 15 | core | The AI checking the human | Treat output as a draft |
