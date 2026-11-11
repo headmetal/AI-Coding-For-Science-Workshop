@@ -1,11 +1,14 @@
 """Check synthetic.csv against the challenge 12 specification. Usage: python check_synthetic.py"""
+import os
 import sys
 
 import numpy as np
 import pandas as pd
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+
 try:
-    df = pd.read_csv("synthetic.csv", parse_dates=["date"])
+    df = pd.read_csv(os.path.join(HERE, "synthetic.csv"), parse_dates=["date"])
 except Exception as exc:  # noqa: BLE001
     print(f"Could not read synthetic.csv with columns date,temperature: {exc}")
     sys.exit(1)

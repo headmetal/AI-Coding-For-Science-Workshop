@@ -1,10 +1,14 @@
 """Score an mld.py against six known profiles. Usage: python check_mld.py"""
 import importlib
+import os
 import sys
 
 import numpy as np
 
 from profiles import make_profiles
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)   # so the checker finds your file when run from anywhere
 
 try:
     mld_module = importlib.import_module("mld")

@@ -1,11 +1,14 @@
 """Compare catalogue.csv to the truth. Usage: python check_catalogue.py"""
+import os
 import sys
 
 import pandas as pd
 
+HERE = os.path.dirname(os.path.abspath(__file__))
+
 try:
-    got = pd.read_csv("catalogue.csv")
-    truth = pd.read_csv("_truth.csv")
+    got = pd.read_csv(os.path.join(HERE, "catalogue.csv"))
+    truth = pd.read_csv(os.path.join(HERE, "_truth.csv"))
 except Exception as exc:  # noqa: BLE001
     print(f"Could not read catalogue.csv or _truth.csv: {exc}")
     sys.exit(1)

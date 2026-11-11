@@ -1,8 +1,12 @@
 """Check a Python port of vint.f90. Usage: python check_port.py (expects vint.py in this folder)."""
 import importlib
+import os
 import sys
 
 import numpy as np
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)   # so the checker finds your file when run from anywhere
 
 try:
     func = getattr(importlib.import_module("vint"), "vertical_integral")

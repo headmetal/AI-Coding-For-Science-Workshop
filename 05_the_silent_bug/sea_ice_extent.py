@@ -1,7 +1,9 @@
 """Monthly Southern Hemisphere sea-ice extent (million km^2) from a gridded concentration field."""
+import os
 import numpy as np
 
-d = np.load("sic_synthetic.npz")
+HERE = os.path.dirname(os.path.abspath(__file__))
+d = np.load(os.path.join(HERE, "sic_synthetic.npz"))
 sic, lat, lon = d["sic"], d["lat"], d["lon"]   # sic: (12, nlat, nlon), 1-degree grid
 
 # ---------------------------------------------------------------------------
